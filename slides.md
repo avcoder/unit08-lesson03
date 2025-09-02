@@ -79,7 +79,6 @@ layout: two-cols
 
 ::right::
 
-<img src="/assets/rn1.jpeg" style="height: 500px; margin: 0 auto">
 
 ---
 transition: slide-left
