@@ -396,7 +396,6 @@ transition: slide-left
 - When you first ran `npm start` look for options for "open Android" or "open iOS simulator"
 - Try pressing `a` for Android or `i` for iOS Simulator
 
-<img src="/assets/ios.png" style="height: 400px; margin: 0 auto" >
 
 ---
 transition: slide-left
