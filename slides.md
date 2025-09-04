@@ -267,11 +267,34 @@ transition: slide-left
 
 # Async Storage (pg.2)
 
+- in `app/index.tsx`:
+  ```tsx
+  import { getFromStorage, saveToStorage } from "../utils/storage";
+  ...
+  const STORAGE_KEY = "shopping-list";
+  ...
+  useEffect(() => {
+    const fetchInitial = async () => {
+      const data = await getFromStorage(STORAGE_KEY)
+      if (data) {
+        setShoppingList(data);
+      }
+    };
+    fetchInitial();
+  }, [])
+  ...
+  // in handleSubmit, handleDelete AND handleToggleComplete:
+    saveToStorage(STORAGE_KEY, shoppingList)
+  ```
+
+
 ---
 transition: slide-left
 ---
 
-# M
+# A
+
+
 
 ---
 transition: slide-left
