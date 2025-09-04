@@ -306,5 +306,6 @@ transition: slide-left
 
 # Homework
 
-- Think about your Capstone Planning Project
+- Think about your Mobile App Assignment due Oct. 5
+- Think about Capstone Planning Project
    - can submit before due date if you wish
