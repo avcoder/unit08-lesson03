@@ -307,6 +307,7 @@ transition: slide-left
 ## Exercise
 - Implement all 4 places where you would call `LayoutAnimation`
   - Hint: must call it before we do a state change for shoppingList
+- Reload your app, and try toggling an item to complete it -- does item animate?
 
 ---
 transition: slide-left
@@ -324,10 +325,7 @@ class: text-left
 # 10 minute break
 
 🍦 Cool Tips, Trends and Resources:
-- 👩‍💻 [React Native on FCC](https://www.freecodecamp.org/news/build-a-meditation-app-with-react-native-expo-router/)
-- 📄 [UI: React Native Paper](https://reactnativepaper.com/)
-- ⚛️ [UI: React Native Elements](https://reactnativeelements.com/)
-- 🧭 [React Navigation](https://reactnavigation.org/)
+- 🏇 [React Native Re-Animated](https://docs.swmansion.com/react-native-reanimated/)
 
 
 <br>
