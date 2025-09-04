@@ -130,7 +130,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Add circle vs checkmark, if completed
+# Add circle vs checkmark, if completed (pg.1)
 
 - import any checkmark icon from [expo/vector-icons](https://icons.expo.fyi/Index)
 - in `ShoppingListItem.tsx`, place checkmark icon inside our `<Pressable>`, but above our `<Text>`
@@ -156,7 +156,61 @@ transition: slide-left
 transition: slide-left
 ---
 
-# L
+# Exercise: Add circle vs checkmark (pg.2)
+
+- Make it so that the checkmark icon appears if the item is completed; otherwise a circle icon appears
+- Tip: Perhaps use ternary operator within the icon component itself for the `name` prop
+  `<WhateverIconLibrary name={ someCondition ? "check" : "circle" }`
+- Optional: adjust colors for completed vs incomplete using our theme.ts
+
+
+
+---
+transition: slide-left
+---
+
+# Exercise: Ordering (pg.1)
+
+- Q: How might you accomplish the following:
+  - if an item is completed, it moves to the bottom of the list and vice versa
+
+- in `app/index.tsx`, add a new property:
+  ```tsx
+  type ShoppingListItemType = {
+    ...
+    lastUpdated: number;
+  ```
+
+---
+transition: slide-left
+---
+
+# Exercise: Ordering (pg.2)
+
+- Paste following in our `app/index.tsx`
+```tsx
+function orderShoppingList(shoppingList: ShoppingListItemType[]) {
+  return shoppingList.sort((item1, item2) => {
+    if (item1.completedAtTimestamp && item2.completedAtTimestamp) {
+      return item2.completedAtTimestamp - item1.completedAtTimestamp;
+    }
+
+    if (item1.completedAtTimestamp && !item2.completedAtTimestamp) {
+      return 1;
+    }
+
+    if (!item1.completedAtTimestamp && item2.completedAtTimestamp) {
+      return -1;
+    }
+
+    if (!item1.completedAtTimestamp && !item2.completedAtTimestamp) {
+      return item2.lastUpdatedTimestamp - item1.lastUpdatedTimestamp;
+    }
+
+    return 0;
+  });
+}
+```
 
 ---
 transition: slide-left
