@@ -233,6 +233,8 @@ transition: slide-left
 
 - right now, if we reload our app, our data is gone; we need some way to persist the data
 - Q: What browser feature allows you to persist data?  (Hint: 2 possibilities)
+- In React Native we have Async Storage
+- `npx expo install @react-native-async-storage/async-storage`
 
 <!--
 localStorage, indexedDB
