@@ -340,15 +340,27 @@ transition: slide-left
 View the [docs](https://docs.expo.dev/versions/latest/sdk/haptics/#installation)
 
 - `npx expo install expo-haptics`
-- Copy the [Usage code](https://docs.expo.dev/versions/latest/sdk/haptics/#installation) and put it in our `idea.tsx` to try it out all the haptics vibes
+- Copy the [Usage code](https://docs.expo.dev/versions/latest/sdk/haptics/#installation) and put it in our `idea.tsx` to try it out all the haptics 
+
+```tsx
+<Button
+  title="Success"
+  onPress={
+    () =>
+      Haptics.notificationAsync(
+        Haptics.NotificationFeedbackType.Success
+      )
+  }
+/>
+```
 
 ---
 transition: slide-left
 ---
 
 # Exercise: Haptics
+Now that you know how to use Haptics, let's place it in our app
 
-- Now that you know how to use Haptics, let's place it in our app
 1. Implement a haptic (Ex: medium impact) when the user deletes an item
 2. Implement a haptic when the user completes an item
 3. Implement a haptic when the user marks a previously completed item, incomplete.
