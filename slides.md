@@ -173,7 +173,6 @@ transition: slide-left
 
 - Q: How might you accomplish the following:
   - if an item is completed, it moves to the bottom of the list and vice versa
-
 - in `app/index.tsx`, add a new property:
   ```tsx
   type ShoppingListItemType = {
