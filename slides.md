@@ -537,6 +537,37 @@ transition: slide-left
 transition: slide-left
 ---
 
+# Local Push Notifications: Usage (pg.3)
+
+- to actually setup a notification:
+```tsx
+import { ... Alert } from "react-native";
+import * as Notifications from "expo-notifications";
+```
+
+- remove handleRequestPermission function and replace with:
+```tsx
+const scheduleNotification = async () => {
+  const result = await registerForPushNotificationsAsync();
+  if (result === "granted") {
+      await Notifications.scheduleNotificationAsync({
+        content: { title: "I'm a notification from your app! 📨" },
+        trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds: 5 },
+      });
+    } else {
+      Alert.alert("Unable to schedule notification", "Enable the notifications permission for Expo Go in settings");
+    }
+   };
+   ...
+   onPress={scheduleNotification}
+   ...
+   <Text style={styles.buttonText}>Schedule notification</Text>
+```
+
+---
+transition: slide-left
+---
+
 # Scheduling Notifications
 
 ---
