@@ -196,7 +196,7 @@ transition: slide-left
 
 # Exercise: Ordering (pg.2)
 
-- Paste following in our `app/index.tsx`
+- Paste following in our `app/index.tsx` -- Where would you call it?
 ```tsx
 function orderShoppingList(shoppingList: ShoppingListItemType[]) {
   return shoppingList.sort((item1, item2) => {
@@ -221,11 +221,15 @@ function orderShoppingList(shoppingList: ShoppingListItemType[]) {
 }
 ```
 
+<!--
+call it within FlatList data prop {orderShoppingList(shoppingList)}
+-->
+
 ---
 transition: slide-left
 ---
 
-# C
+# Data Persistence
 
 ---
 transition: slide-left
