@@ -564,6 +564,14 @@ const scheduleNotification = async () => {
    <Text style={styles.buttonText}>Schedule notification</Text>
 ```
 
+---
+transition: slide-left
+---
+
+# Challenge Exercise
+
+- Now that you know how to set up notifications after 5 seconds, try the following challenge:
+- Create a Timer, where the user can input the number of seconds and a notification with Haptics will appear after that time has elapsed
 
 ---
 transition: slide-left
