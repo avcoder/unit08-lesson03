@@ -62,15 +62,17 @@ transition: slide-left
     ...
     onPress: onDelete,
    ```
-- in `./app/index.tsx` create onDelete
+- in `./app/index.tsx` create handleDelete
   ```tsx
   const handleDelete = (id: string) => {
     const newShoppingList = shoppingList.filter(item => item.id !== id)
     setShoppingList(newShoppingList);
   }
   ...
-  renderItem={ ({item}) => <ShoppingListITem ... onDelete={() => handleDelete(item.id)} />}
+  renderItem={ ({item}) => <ShoppingListItem ... onDelete={() => handleDelete(item.id)} />}
   ```
+  - try deleting items now
+  
 ---
 transition: slide-left
 ---
