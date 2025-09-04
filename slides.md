@@ -537,7 +537,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Local Push Notifications: Usage (pg.3)
+# Scheduled Notifications
 
 - to actually setup a notification:
 ```tsx
