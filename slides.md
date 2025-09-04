@@ -39,13 +39,36 @@ transition: slide-left
 # Recap 
 
 - see https://github.com/avcoder/mobile-react-native-01
+- We've built the UI to add items to our note-taking/to-do app
+- We've included routing using Expo Router and experimented with different ways of navigating (Stacked, Modal, programmatically, Tabbed)
+- We've experimented with different ways to list our items: ScrollView vs FlatList
 
 ---
 transition: slide-left
 ---
 
-# S 
+# Deleting Items
 
+- in `components/ShoppingListItem.tsx` in our `handleDelete` function, modify our TS and `onPress`
+   ```tsx  
+   type ShoppingListItemProps = {
+    ...
+    onDelete: () => void;
+   }
+
+   const ShoppingListItem = ({ name, isCompleted, onDelete }
+    ...
+    onPress: onDelete,
+   ```
+- in `./app/index.tsx` create onDelete
+  ```tsx
+  const handleDelete = (id: string) => {
+    const newShoppingList = shoppingList.filter(item => item.id !== id)
+    setShoppingList(newShoppingList);
+  }
+  ...
+  renderItem={ ({item}) => <ShoppingListITem ... onDelete={() => handleDelete(item.id)} />}
+  ```
 ---
 transition: slide-left
 ---
