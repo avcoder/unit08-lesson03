@@ -481,6 +481,57 @@ export async function registerForPushNotificationsAsync() { // devs can only ask
 }
 ```
 
+---
+transition: slide-left
+---
+
+# Local Push Notifications: Usage (pg.1)
+
+- in `/counter/index.tsx`:
+  ```tsx
+  import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
+  import { theme } from "../../theme";
+  import { registerForPushNotificationsAsync } from "../../utils/registerForPushNotificationsAsync";
+
+  export default function CounterScreen() {
+    const handleRequestPermission = async () => {
+      const result = await registerForPushNotificationsAsync();
+      console.log("Permission: ", result);
+    };
+
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+           onPress={handleRequestPermission}
+           style={styles.button}
+           activeOpacity={0.8}
+        >
+          <Text style={styles.buttonText}>Request permission</Text>
+        </TouchableOpacity>
+     </View>
+   );
+  }
+  ```
+
+---
+transition: slide-left
+---
+
+# Local Push Notifications: Usage (pg.2)
+
+- add some styles
+```tsx
+  button: {
+    backgroundColor: theme.colorBlack,
+    padding: 12,
+    borderRadius: 6,
+  },
+  buttonText: {
+    color: "#fff",
+    fontWeight: "bold",
+    textTransform: "uppercase",
+    letterSpacing: 1,
+```
 
 ---
 transition: slide-left
