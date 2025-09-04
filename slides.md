@@ -314,6 +314,30 @@ transition: slide-left
 ---
 
 # Haptics
+Vibrations your phone generates to improve UX.  See [docs](https://docs.expo.dev/versions/latest/sdk/haptics/)
+
+- expo-haptics provides haptic (touch) feedback for:
+  - Android devices using Vibrator system service.
+  - iOS 10+ devices using the Taptic Engine.
+  - Web platforms using the Web Vibration API.
+  - On iOS, the Taptic engine will do nothing if any of the following conditions are true on a user's device:
+    - Low Power Mode is enabled. This can be detected with expo-battery.
+    - User disabled the Taptic Engine in settings.
+    - iOS Camera is active (to prevent destabilization).
+    - iOS dictation is active (to not disturb the microphone input).
+  - On web, the library uses the Web Vibration API. Note the following:
+    - The API must be supported by the browser (check browser compatibility)
+    - The device must have vibration hardware
+    - The user must grant permission to use vibration (usually automatic)
+
+
+---
+transition: slide-left
+---
+
+# Haptics Install and Usage
+
+- `npx expo install expo-haptics`
 
 ---
 layout: image-right
