@@ -286,7 +286,7 @@ transition: slide-left
   // in handleSubmit, handleDelete AND handleToggleComplete:
     saveToStorage(STORAGE_KEY, shoppingList)
   ```
-
+- Test: input a few items, reload app -- do items persist now?
 
 ---
 transition: slide-left
