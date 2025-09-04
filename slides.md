@@ -20,7 +20,7 @@ mdc: true
 Mobile Development: Unit 08 - Lesson 03
 
 - [ ] Deleting, Sorting
-- [ ] Data Persistence
+- [ ] Async Storage
 - [ ] Haptics and Notications
 
 <div class="abs-br m-6 text-xl">
@@ -229,7 +229,14 @@ call it within FlatList data prop {orderShoppingList(shoppingList)}
 transition: slide-left
 ---
 
-# Data Persistence
+# Async Storage
+
+- right now, if we reload our app, our data is gone; we need some way to persist the data
+- Q: What browser feature allows you to persist data?  (Hint: 2 possibilities)
+
+<!--
+localStorage, indexedDB
+-->
 
 ---
 transition: slide-left
