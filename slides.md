@@ -458,7 +458,7 @@ transition: slide-left
 import { Platform } from "react-native"; // create this file in utils/registerForPushNotificationsAsync.ts
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
-export async function registerForPushNotificationsAsync() {
+export async function registerForPushNotificationsAsync() { // devs can only ask users once; else user > settings
   if (Platform.OS === "android") { // Android 8.0 requires all notifs be assigned to a channel
     await Notifications.setNotificationChannelAsync("default", {
       name: "default",
