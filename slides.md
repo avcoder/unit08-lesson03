@@ -21,7 +21,7 @@ Mobile Development: Unit 08 - Lesson 03
 
 - [ ] Deleting, Sorting
 - [ ] Async Storage, Layout Animations
-- [ ] Haptics and Notications
+- [ ] Haptics and Local Push Notications
 
 <div class="abs-br m-6 text-xl">
   <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
@@ -564,11 +564,6 @@ const scheduleNotification = async () => {
    <Text style={styles.buttonText}>Schedule notification</Text>
 ```
 
----
-transition: slide-left
----
-
-# Scheduling Notifications
 
 ---
 transition: slide-left
