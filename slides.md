@@ -169,7 +169,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Ordering (pg.1)
+# Ordering & Sorting (pg.1)
 
 - Q: How might you accomplish the following:
   - if an item is completed, it moves to the bottom of the list and vice versa
@@ -194,7 +194,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Exercise: Ordering (pg.2)
+# Exercise: Ordering & Sorting (pg.2)
 
 - Paste following in our `app/index.tsx` -- Where would you call it?
 ```tsx
