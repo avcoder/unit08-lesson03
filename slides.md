@@ -467,7 +467,7 @@ export async function registerForPushNotificationsAsync() { // devs can only ask
     });
   }
   
-  if (Device.isDevice) { // checks if running on a real physical device. Notifs don't work on emulators
+  if (Device.isDevice) { // checks if running on a real physical device. Notifs may not work on emulators
     const { status: existingStatus } = await Notifications.getPermissionsAsync();
     if (existingStatus !== "granted") {
       const { status } = await Notifications.requestPermissionsAsync(); // Actual line that requests
