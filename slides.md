@@ -72,7 +72,7 @@ transition: slide-left
   renderItem={ ({item}) => <ShoppingListItem ... onDelete={() => handleDelete(item.id)} />}
   ```
   - try deleting items now
-  
+
 ---
 transition: slide-left
 ---
@@ -130,7 +130,27 @@ transition: slide-left
 transition: slide-left
 ---
 
-# E
+# Add circle vs checkmark, if completed
+
+- import any checkmark icon from [expo/vector-icons](https://icons.expo.fyi/Index)
+- in `ShoppingListItem.tsx`, place checkmark icon inside our `<Pressable>`, but above our `<Text>`
+- may have to wrap both icon and `<Text>` inside a `<View style={styles.row}>` 
+  - use `flexDirection: "row", gap: 16`
+
+## Exercise
+- Q: What happens if you enter really long text?  Does it break the design?  Add the following:
+  ```tsx
+  <Text
+    numberOfLines={1}
+  ...
+  itemText: {
+    ...
+    flex: 1,
+  ...
+  row: {
+    ...
+    flex: 1
+  ```
 
 ---
 transition: slide-left
