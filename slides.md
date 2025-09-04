@@ -169,7 +169,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Exercise: Ordering (pg.1)
+# Ordering (pg.1)
 
 - Q: How might you accomplish the following:
   - if an item is completed, it moves to the bottom of the list and vice versa
@@ -179,6 +179,16 @@ transition: slide-left
   type ShoppingListItemType = {
     ...
     lastUpdated: number;
+  ...
+  const handleSubmit = () => {
+    ...
+    { id: ..., lastUpdated: Date.now()}
+  ...
+  const handleToggleComplete = (id: string) => {
+    ...
+    return {
+      ...
+      lastUpdated: Date.now(),
   ```
 
 ---
