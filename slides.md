@@ -340,7 +340,7 @@ transition: slide-left
 View the [docs](https://docs.expo.dev/versions/latest/sdk/haptics/#installation)
 
 - `npx expo install expo-haptics`
-- Copy the [Usage code](https://docs.expo.dev/versions/latest/sdk/haptics/#installation) and put it in our `idea.tsx` to try it out all the haptics 
+- Copy the [Usage code](https://docs.expo.dev/versions/latest/sdk/haptics/#installation) and put it in our `idea.tsx` to try out all the haptics.  Feel the vibes! 〰️
 
 ```tsx
 <Button
