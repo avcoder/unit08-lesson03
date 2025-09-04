@@ -308,6 +308,7 @@ transition: slide-left
 - Implement all 4 places where you would call `LayoutAnimation`
   - Hint: must call it before we do a state change for shoppingList
 - Reload your app, and try toggling an item to complete it -- does item animate?
+- Try the other animation presets as listed in the [Docs](https://reactnative.dev/docs/layoutanimation#presets)
 
 ---
 transition: slide-left
@@ -335,7 +336,7 @@ Vibrations your phone generates to improve UX.  See [docs](https://docs.expo.dev
 transition: slide-left
 ---
 
-# Haptics Install and Usage
+# Haptics Installation and Usage
 
 - `npx expo install expo-haptics`
 
