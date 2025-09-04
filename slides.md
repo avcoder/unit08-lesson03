@@ -42,8 +42,11 @@ transition: slide-left
 - We've built the UI to add items to our note-taking/to-do app
 - We've included routing using Expo Router and experimented with different ways of navigating (Stacked, Modal, programmatically, Tabbed)
 - We've experimented with different ways to list our items: ScrollView vs FlatList
+
+## Capstone and Mobile Assignment Due Dates
 - Q: Can I submit my mobile assignment after submitting my capstone assignment?
   - A: Yes.  Revisit [assignment weights](https://unit01-lesson01.netlify.app/4)
+- So for due dates, as long as I get both Mobile App, and Capstone before Oct 23, then we're all good.
 
 ---
 transition: slide-left
@@ -229,7 +232,7 @@ call it within FlatList data prop {orderShoppingList(shoppingList)}
 transition: slide-left
 ---
 
-# Async Storage
+# Async Storage (pg.1)
 
 - Q: What browser feature allows you to persist data?  (Hint: 2 possibilities)
 - In React Native we have Async Storage
@@ -262,7 +265,7 @@ localStorage, indexedDB
 transition: slide-left
 ---
 
-# I
+# Async Storage (pg.2)
 
 ---
 transition: slide-left
