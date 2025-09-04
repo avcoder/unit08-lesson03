@@ -20,7 +20,7 @@ mdc: true
 Mobile Development: Unit 08 - Lesson 03
 
 - [ ] Deleting, Sorting
-- [ ] Async Storage
+- [ ] Async Storage, Layout Animations
 - [ ] Haptics and Notications
 
 <div class="abs-br m-6 text-xl">
@@ -292,7 +292,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# A
+# Layout Animations
 
 
 
