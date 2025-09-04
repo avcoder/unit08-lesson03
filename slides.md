@@ -470,7 +470,7 @@ export async function registerForPushNotificationsAsync() { // devs can only ask
   if (Device.isDevice) { // checks if running on a real physical device or an emulator
     const { status: existingStatus } = await Notifications.getPermissionsAsync();
     if (existingStatus !== "granted") {
-      const { status } = await Notifications.requestPermissionsAsync();
+      const { status } = await Notifications.requestPermissionsAsync(); // Actual line that requests
       return status;
     } else {
       return existingStatus;
