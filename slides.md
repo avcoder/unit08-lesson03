@@ -430,9 +430,8 @@ transition: slide-left
   - [Remote notifications](https://docs.expo.dev/push-notifications/sending-notifications/) are sent from server to device using the device push token
   - Local notifications are scheduled from within the app are sent to local device only
 - `npx expo install expo-notifications expo-device`
-  - expo-notifications: the official Expo package for handling notifications in your app
   ```tsx
-  import * as Notifications from 'expo-notifications';
+  import * as Notifications from 'expo-notifications'; // official Expo package for handling notifications
   Notifications.scheduleNotificationAsync({
     content: {
       title: "Hello",
@@ -441,13 +440,13 @@ transition: slide-left
     trigger: { seconds: 5 },
   });
   ```
-  - expo-device: provides device info like model name, OS, device type, manufacturer, etc.
     ```tsx
-    import * as Device from 'expo-device';
-    console.log(Device.modelName);     // e.g. "iPhone 14 Pro"
-    console.log(Device.osName);        // "iOS" or "Android"
-    console.log(Device.isDevice);      // true (on real device), false (simulator)
+    import * as Device from 'expo-device';  // provides device info: model name, OS, device type, manufacturer etc.
+    console.log(Device.modelName);          // e.g. "iPhone 14 Pro"
+    console.log(Device.osName);             // "iOS" or "Android"
+    console.log(Device.isDevice);           // true (on real device), false (simulator)
     ```
+- But before we can send any notifs, must ask permission first.  Let's add a utility to do this for us...
 
 ---
 transition: slide-left
