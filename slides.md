@@ -354,6 +354,7 @@ View the [docs](https://docs.expo.dev/versions/latest/sdk/haptics/#installation)
 />
 ```
 
+- ask ChatGPT: `in react-native, what's the difference between Haptics.impactAsync, Haptics.notificationAsync and Haptics.selectionAsync`
 ---
 transition: slide-left
 ---
