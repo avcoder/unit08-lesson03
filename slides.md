@@ -42,6 +42,8 @@ transition: slide-left
 - We've built the UI to add items to our note-taking/to-do app
 - We've included routing using Expo Router and experimented with different ways of navigating (Stacked, Modal, programmatically, Tabbed)
 - We've experimented with different ways to list our items: ScrollView vs FlatList
+- Q: Can I submit my mobile assignment after submitting my capstone assignment?
+  - A: Yes.  Revisit [assignment weights](https://unit01-lesson01.netlify.app/4)
 
 ---
 transition: slide-left
