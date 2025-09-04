@@ -354,7 +354,22 @@ View the [docs](https://docs.expo.dev/versions/latest/sdk/haptics/#installation)
 />
 ```
 
-- ask ChatGPT: `in react-native, what's the difference between Haptics.impactAsync, Haptics.notificationAsync and Haptics.selectionAsync`
+
+---
+transition: slide-left
+---
+
+# Differences between Haptics
+`Haptics.impactAsync` vs `Haptics.notificationAsync` vs `Haptics.selectionAsync`?
+
+| Method                    | Purpose                      | Feedback Style                    | Use Cases                     |
+| ------------------------- | ---------------------------- | --------------------------------- | ----------------------------- |
+| `selectionAsync()`        | Selection changes            | Light, subtle tick                | Picker, tabs, dropdowns       |
+| `impactAsync(style)`      | UI interactions (press/drag) | Light / Medium / Heavy bump       | Buttons, drag & drop, toggles |
+| `notificationAsync(type)` | Status or event feedback     | Success / Warning / Error pattern | Form success/error, alerts    |
+
+
+
 ---
 transition: slide-left
 ---
