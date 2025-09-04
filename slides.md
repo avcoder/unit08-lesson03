@@ -318,6 +318,7 @@ transition: slide-left
 ---
 layout: image-right
 transition: slide-left
+image: /assets/context.png
 backgroundSize: 444px 380px
 class: text-left
 ---
@@ -326,7 +327,11 @@ class: text-left
 
 🍦 Cool Tips, Trends and Resources:
 - 🏇 [React Native Re-Animated](https://docs.swmansion.com/react-native-reanimated/)
-
+- 💫 [Rising Stars 2024](https://risingstars.js.org/2024/en#section-all) 
+- ⚖️ [Problem with React useContext](https://x.com/aidenybai/status/1876689003661136094)
+- 🧮 [Comp Sci Papers every Dev should read](https://newsletter.techworld-with-milan.com/p/computer-science-papers-every-developer)
+- 🤖 [AI and Illeterate Programmers](https://nmn.gl/blog/ai-illiterate-programmers)
+- 📚 [React Libraries](https://www.robinwieruch.de/react-libraries/)
 
 <br>
 <hr>
