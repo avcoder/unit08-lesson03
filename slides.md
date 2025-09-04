@@ -315,7 +315,7 @@ transition: slide-left
 ---
 
 # Haptics
-Vibrations your phone generates to improve UX.  See [docs](https://docs.expo.dev/versions/latest/sdk/haptics/)
+Vibrations your phone generates to improve UX.  
 
 - expo-haptics provides haptic (touch) feedback for:
   - Android devices using Vibrator system service.
@@ -336,9 +336,11 @@ Vibrations your phone generates to improve UX.  See [docs](https://docs.expo.dev
 transition: slide-left
 ---
 
-# Haptics Installation and Usage
+# Exercise: Haptics Installation and Usage
+View the [docs](https://docs.expo.dev/versions/latest/sdk/haptics/#installation)
 
 - `npx expo install expo-haptics`
+- Copy the [Usage code](https://docs.expo.dev/versions/latest/sdk/haptics/#installation) and put it in our `idea.tsx` to try it out all the haptics vibes
 
 ---
 layout: image-right
