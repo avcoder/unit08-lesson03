@@ -458,7 +458,7 @@ import { Platform } from "react-native"; // create this file in utils/registerFo
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 export async function registerForPushNotificationsAsync() { // devs can only ask users once; else user > settings
-  if (Platform.OS === "android") { // Android 8.0 requires all notifs be assigned to a channel
+  if (Platform.OS === "android") { // Android requires all notifs be assigned to a channel
     await Notifications.setNotificationChannelAsync("default", {
       name: "default",
       importance: Notifications.AndroidImportance.DEFAULT,
