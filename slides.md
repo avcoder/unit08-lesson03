@@ -362,13 +362,21 @@ transition: slide-left
 Now that you know how to use Haptics, let's place it in our app
 
 1. Implement a haptic (Ex: medium impact) when the user deletes an item
+
 2. Implement a haptic when the user completes an item
+
 3. Implement a haptic when the user marks a previously completed item, incomplete.
 
 ```tsx
 import * as Haptics from "expo-haptics";
 ...
 Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+...
+if (item.completedAtTimestamp) {
+  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+} else {
+   Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+}
 ```
 
 ---
