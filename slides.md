@@ -75,13 +75,54 @@ transition: slide-left
 transition: slide-left
 ---
 
-# S
+# Completing an item (pg.1)
+
+- in ShoppingListITem.tsx let's begin the infrastructure to place an checkmark icon beside our text
+- Change our `<View>` to `<Pressable>`
+  ```tsx
+  import { ... Pressable } from 'react-native';
+  ...
+  type ShoppingListItemProps = {
+    ...
+    onToggleComplete: () => void;
+  ...
+  const ShoppingListItem = ({ name, isCompleted, onDelete, onToggleComplete }: ShoppingListItemProps) => {
+  ...
+  <Pressable
+    ...
+    onPress={onToggleComplete}
+  ```
 
 ---
 transition: slide-left
 ---
 
-# S
+# Completing an item (pg.2)
+
+- in `/app/index.tsx` add another property:
+  ```tsx
+  type ShoppingListItemType = {
+    ...
+    completedAt?: number;
+  ...
+  const handleToggleComplete = (id: string) => {
+    const newShoppingList = shoppingList.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          completedAt: item.completedAt ? undefined : Date.now(),
+        }
+      }
+      return item;
+    });
+    setShoppingList(newShoppingList);
+  }
+  ...
+  <ShoppingListItem
+    ...
+    onToggleComplete={() => handleToggleComplete(item.id)}
+    isCompleted={!!item.completedAt}
+  ```
 
 ---
 transition: slide-left
