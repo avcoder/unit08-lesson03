@@ -294,7 +294,19 @@ transition: slide-left
 
 # Layout Animations
 
+- A simple, but limited way to get full-page animations
+- import `LayoutAnimation`:
+  ```tsx
+  import { ... LayoutAnimation } from 'react-native';
+  ```
+- Must call Layout Animation before you do a state change
+  ```tsx
+  LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut)
+  ```
 
+## Exercise
+- Implement all 4 places where you would call `LayoutAnimation`
+  - Hint: must call it before we do a state change for shoppingList
 
 ---
 transition: slide-left
