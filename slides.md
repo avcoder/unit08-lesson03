@@ -365,6 +365,11 @@ Now that you know how to use Haptics, let's place it in our app
 2. Implement a haptic when the user completes an item
 3. Implement a haptic when the user marks a previously completed item, incomplete.
 
+```tsx
+import * as Haptics from "expo-haptics";
+...
+Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+```
 
 ---
 layout: image-right
