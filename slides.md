@@ -203,19 +203,19 @@ transition: slide-left
 ```tsx
 function orderShoppingList(shoppingList: ShoppingListItemType[]) {
   return shoppingList.sort((item1, item2) => {
-    if (item1.completedAtTimestamp && item2.completedAtTimestamp) {
-      return item2.completedAtTimestamp - item1.completedAtTimestamp;
+    if (item1.completedAt && item2.completedAt) {
+      return item2.completedAt - item1.completedAt;
     }
 
-    if (item1.completedAtTimestamp && !item2.completedAtTimestamp) {
+    if (item1.completedAt && !item2.completedAt) {
       return 1;
     }
 
-    if (!item1.completedAtTimestamp && item2.completedAtTimestamp) {
+    if (!item1.completedAt && item2.completedAt) {
       return -1;
     }
 
-    if (!item1.completedAtTimestamp && !item2.completedAtTimestamp) {
+    if (!item1.completedAt && !item2.completedAt) {
       return item2.lastUpdatedTimestamp - item1.lastUpdatedTimestamp;
     }
 
@@ -388,7 +388,7 @@ import * as Haptics from "expo-haptics";
 ...
 Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
 ...
-if (item.completedAtTimestamp) {
+if (item.completedAt) {
   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
 } else {
    Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
