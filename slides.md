@@ -216,7 +216,7 @@ function orderShoppingList(shoppingList: ShoppingListItemType[]) {
     }
 
     if (!item1.completedAt && !item2.completedAt) {
-      return item2.lastUpdatedTimestamp - item1.lastUpdatedTimestamp;
+      return item2.lastUpdated - item1.lastUpdated;
     }
 
     return 0;
