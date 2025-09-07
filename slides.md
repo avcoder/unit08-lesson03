@@ -567,7 +567,6 @@ transition: slide-left
 # Scheduled Notifications (pg.2)
 
 ```tsx
-  if (result === "granted") {
       await Notifications.scheduleNotificationAsync({
         content: { title: "I'm a notification from your app! 📨" },
         trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds: 5 },
