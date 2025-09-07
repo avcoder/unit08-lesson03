@@ -537,7 +537,7 @@ transition: slide-left
 transition: slide-left
 ---
 
-# Scheduled Notifications
+# Scheduled Notifications (pg.1)
 
 - to actually setup a notification:
 ```tsx
@@ -550,6 +550,24 @@ import * as Notifications from "expo-notifications";
 const scheduleNotification = async () => {
   const result = await registerForPushNotificationsAsync();
   if (result === "granted") {
+      Notifications.setNotificationHandler({
+        handleNotification: async () => ({
+          shouldShowBanner: true,
+          shouldShowList: true,
+          shouldPlaySound: true,
+          shouldSetBadge: false,
+        }),
+      });
+```
+
+---
+transition: slide-left
+---
+
+# Scheduled Notifications (pg.2)
+
+```tsx
+  if (result === "granted") {
       await Notifications.scheduleNotificationAsync({
         content: { title: "I'm a notification from your app! 📨" },
         trigger: { type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL, seconds: 5 },
@@ -558,11 +576,13 @@ const scheduleNotification = async () => {
       Alert.alert("Unable to schedule notification", "Enable the notifications permission for Expo Go in settings");
     }
    };
-   ...
-   onPress={scheduleNotification}
-   ...
-   <Text style={styles.buttonText}>Schedule notification</Text>
+};
+...
+onPress={scheduleNotification}
+...
+<Text style={styles.buttonText}>Schedule notification</Text>
 ```
+
 
 ---
 transition: slide-left
